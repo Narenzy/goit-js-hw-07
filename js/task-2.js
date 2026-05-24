@@ -33,7 +33,7 @@ const galleryImages = document.querySelector('.gallery');
 galleryImages.insertAdjacentHTML('beforeend', text.join(''));
 
 galleryImages.style.display = 'flex';
-galleryImages.style.flexDirection = 'column';
+galleryImages.style.flexWrap = 'wrap';
 galleryImages.style.listStyle = 'none';
 
 const items = galleryImages.querySelectorAll('.items');
@@ -41,9 +41,10 @@ const imags = galleryImages.querySelectorAll('.image');
 
 items.forEach(item => {
   item.style.listStyle = 'none';
+  item.style.flexBasis = 'calc((100% - 48px) / 3)';
 });
 
 imags.forEach(img => {
-  img.style.width = '360px';
+  img.style.width = '580px';
   img.style.height = 'auto';
 });
