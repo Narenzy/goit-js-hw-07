@@ -32,10 +32,18 @@ const text = images.map(image => {
 const galleryImages = document.querySelector('.gallery');
 galleryImages.insertAdjacentHTML('beforeend', text.join(''));
 
-gallery.style.display = 'flex';
-gallery.style.flexDirection = 'wrap';
-const items = gallery.querySelectorAll('.items');
+galleryImages.style.display = 'flex';
+galleryImages.style.flexDirection = 'column';
+galleryImages.style.listStyle = 'none';
+
+const items = galleryImages.querySelectorAll('.items');
+const imags = galleryImages.querySelectorAll('.image');
 
 items.forEach(item => {
   item.style.listStyle = 'none';
+});
+
+imags.forEach(img => {
+  img.style.width = '360px';
+  img.style.height = 'auto';
 });
