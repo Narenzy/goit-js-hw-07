@@ -12,7 +12,7 @@ function handleSubmit(event) {
   } else {
     const formData = {
       email: login,
-      pass: password,
+      password: password,
     };
 
     console.log(formData);
